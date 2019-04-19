@@ -2,12 +2,12 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 ?><?$APPLICATION->IncludeComponent(
-	"redsign:daysarticle2.list",
-	"day_list",
-	Array(
+	"redsign:daysarticle2.list", 
+	"day_list_main", 
+	array(
 		"CACHE_TIME" => "3600",
 		"CACHE_TYPE" => "A",
-		"COMPONENT_TEMPLATE" => "day_list",
+		"COMPONENT_TEMPLATE" => "day_list_main",
 		"CONVERT_CURRENCY" => "Y",
 		"COUNT_ELEMENTS" => "5",
 		"CURRENCY_ID" => "RUB",
@@ -15,17 +15,42 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 		"MAX_HEIGHT" => "50",
 		"MAX_WIDTH" => "50",
 		"OFFERS_LIMIT" => "1000",
-		"OFFERS_PROPERTY_CODE" => array(0=>"CML2_LINK",1=>"ARTNUMBER",2=>"COLOR_REF",3=>"SIZES_SHOES",4=>"SIZES_CLOTHES",5=>"",),
+		"OFFERS_PROPERTY_CODE" => array(
+			0 => "CML2_LINK",
+			1 => "ARTNUMBER",
+			2 => "COLOR_REF",
+			3 => "SIZES_SHOES",
+			4 => "SIZES_CLOTHES",
+			5 => "",
+		),
 		"OFFERS_SORT_FIELD" => "sort",
 		"OFFERS_SORT_FIELD2" => "id",
 		"OFFERS_SORT_ORDER" => "asc",
 		"OFFERS_SORT_ORDER2" => "desc",
 		"PRICE_CODE" => "BASE",
 		"PRICE_VAT_INCLUDE" => "Y",
-		"PROPERTY_CODE" => array(0=>"TITLE",1=>"KEYWORDS",2=>"META_DESCRIPTION",3=>"BRAND_REF",4=>"NEWPRODUCT",5=>"SALELEADER",6=>"SPECIALOFFER",7=>"ARTNUMBER",8=>"MANUFACTURER",9=>"MATERIAL",10=>"COLOR",11=>"BLOG_POST_ID",12=>"BLOG_COMMENTS_CNT",13=>"RECOMMEND",14=>"TREND",),
+		"PROPERTY_CODE" => array(
+			0 => "TITLE",
+			1 => "KEYWORDS",
+			2 => "META_DESCRIPTION",
+			3 => "BRAND_REF",
+			4 => "NEWPRODUCT",
+			5 => "SALELEADER",
+			6 => "SPECIALOFFER",
+			7 => "ARTNUMBER",
+			8 => "MANUFACTURER",
+			9 => "MATERIAL",
+			10 => "COLOR",
+			11 => "BLOG_POST_ID",
+			12 => "BLOG_COMMENTS_CNT",
+			13 => "RECOMMEND",
+			14 => "TREND",
+		),
 		"SHOW_TYPE" => "Y",
-		"TEXT_OR_PROP" => "text"
-	)
+		"TEXT_OR_PROP" => "text",
+		"TEMPLATE_SIZE" => "big"
+	),
+	false
 );?>
 <br/>
 <?
